@@ -4,7 +4,7 @@ Este repositorio contiene el código fuente de mi currículum vitae personal, de
 
 ## Acceso Rápido a Archivos
 
-- [Ver Página Principal (index.html)](index.html) - Haz clic derecho y selecciona "Abrir enlace en nueva pestaña"
+- [Ver Página Principal (index.html)](index.html)
 - [Ver Estilos CSS](assets/css/)
 - [Ver JavaScript](assets/js/)
 - [Ver Imágenes](assets/img/)
@@ -36,25 +36,5 @@ El currículum incluye las siguientes secciones:
 - **Proyectos destacados**
 - **Idiomas**
 - **Información de contacto**
-
-## Tecnologías Utilizadas
-
-- HTML5
-- CSS3
-- Bootstrap 5
-- Font Awesome 6
-- JavaScript (para interactividad)
-
-## Cómo Visualizar
-
-Simplemente abre el archivo `index.html` en tu navegador web favorito para ver el currículum.
-
-## Contacto
-
-- ✉️ Email: jesusdanielaguilerasanchez@gmail.com
-- 💼 LinkedIn: [linkedin.com/in/tu-perfil](https://www.linkedin.com)
-- 💻 GitHub: [github.com/tu-usuario](https://github.com)
-
----
 
 *Última actualización: Septiembre 2025*
