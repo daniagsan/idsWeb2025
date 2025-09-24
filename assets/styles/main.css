@@ -1,0 +1,23 @@
+h2 {
+    background-color: rgb(255, 153, 0);
+}
+
+#listaEducacion {
+    background-color: aqua;
+}
+
+#listaExperiencia {
+    background-color: rgba(0, 4, 255, 0.466);
+}
+
+#listaProyectos {
+    background-color: rgba(183, 0, 255, 0.466);
+}
+
+#listaHabilidades {
+    background-color: rgba(255, 0, 0, 0.466);
+}
+
+a::hover {
+    color: red;
+}
