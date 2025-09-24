@@ -6,8 +6,16 @@ h2 {
     background-color: aqua;
 }
 
+#listaEducacion:hover {
+    background-color: red;
+}
+
 #listaExperiencia {
     background-color: rgba(0, 4, 255, 0.466);
+}
+
+#listaExperiencia:hover {
+    background-color: red;
 }
 
 #listaProyectos {
@@ -18,6 +26,6 @@ h2 {
     background-color: rgba(255, 0, 0, 0.466);
 }
 
-a::hover {
-    color: red;
+a:hover {
+    background-color: blueviolet;
 }
