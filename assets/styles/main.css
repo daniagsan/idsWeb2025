@@ -29,3 +29,10 @@ h2 {
 a:hover {
     background-color: blueviolet;
 }
+
+.boxes {
+    border-color: black;
+    border-style: solid;
+    padding: 2vh;
+    margin: 2vh;
+}
