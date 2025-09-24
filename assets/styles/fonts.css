@@ -1,0 +1,17 @@
+@font-face {
+    font-family: 'Lobster';
+    src: url("../fonts/Lobster-Regular.ttf");
+}
+
+.bigTitle {
+    font-family: 'Lobster';
+    color: #be4444;
+    text-shadow: 2px 2px 4px #000000;
+    text-align: center;
+}
+
+h2 {
+    text-decoration-line: underline;
+    text-transform: uppercase;
+}
+
