@@ -89,5 +89,41 @@ a:hover {
     grid-column-end: 4;
 }
 
+.flex_container {
+    display: flex;
+    background-color: rgb(201, 36, 36);
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.flex_container > div {
+    background-color: #f1f1f1;
+    margin: 10px;
+    padding: 20px;
+    font-size: 24px;
+}
+
+#shyguy {
+    width: 100%;
+    height: auto;
+    margin: 5px;
+}
+
+@media print and (orientation:portrait) {
+    #bgImage {
+        display: none;
+    }
+
+    #shyguy {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    #shyguy {
+        width: 100%;
+    }
+}
 
 
