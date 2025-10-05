@@ -125,11 +125,6 @@ svg {
     color: #fff;
 }
 
-#mail > svg { 
-    color: black;
-}
-
-/* Overlay icon inside input on the right using the existing .input_grid wrapper */
 .input_grid {
     position: relative;
 }
@@ -137,16 +132,16 @@ svg {
 .input_grid > input {
     width: 100%;
     display: block;
-    padding-right: 42px; /* space for the icon */
+    padding-right: 42px; 
 }
 
 .input_grid > svg {
     position: absolute;
     right: 12px;
-    top: 50%;
+    top: 67%;
     transform: translateY(-50%);
     width: 20px;
     height: 20px;
-    pointer-events: none; /* keep input interactions */
-    z-index: 2; /* ensure it renders above input */
+    pointer-events: none;
+    z-index: 2;
 }
