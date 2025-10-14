@@ -1,3 +1,14 @@
 Body {
     background-color: rgb(167, 76, 76);
 }
+
+.calculadora {
+    display: flex;
+    flex-direction: column;
+}
+
+.panelBotonesGrid {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    background-color: aqua;
+}
