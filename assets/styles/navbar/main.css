@@ -1,0 +1,37 @@
+body {
+    background-color: rgb(206, 70, 70);
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 2em;
+    height: auto;
+    margin-right: auto;
+}
+
+ul {
+    display: flex;
+    background-color: blue;
+    align-items: center;
+    gap: 40px;
+    list-style-type: none;
+    margin: 0;
+    padding: 10px;
+    justify-content: space-between;
+}
+
+ul li {
+    background-color: white;
+}
+
+@media only screen and (max-width: 600px){
+    img {
+        
+        margin: auto;
+        gap: 60px;
+    }
+    ul {
+        flex-direction: column;
+    }
+}

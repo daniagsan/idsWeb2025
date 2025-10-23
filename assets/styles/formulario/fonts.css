@@ -1,0 +1,19 @@
+@font-face {
+    font-family: 'CodeNext';
+    src: url("/assets/fonts/CodeNext-Trial-Book.ttf");
+}
+
+@font-face {
+    font-family: 'CodeNextBold';
+    src: url("/assets/fonts/CodeNext-Trial-Bold.ttf");
+}
+
+* {
+    font-family: 'CodeNext';
+}
+
+h1 {
+    font-family: 'CodeNextBold';
+}
+
+

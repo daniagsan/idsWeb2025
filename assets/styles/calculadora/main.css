@@ -7,6 +7,10 @@ Body {
     flex-direction: column;
 }
 
+#inputContenido {
+    text-align: right;
+}
+
 .panelBotonesGrid {
     display: grid;
     grid-template-columns: auto auto auto auto;
