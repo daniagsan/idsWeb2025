@@ -28,7 +28,7 @@ body {
     font-size: 20px;
 }
 
-#form input[type="text"]  {
+.form_input{
     display: flex;
     border-radius: 5px;
     width: 80%;

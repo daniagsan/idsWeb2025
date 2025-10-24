@@ -5,21 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/styles/formulario/main.css">
     <link rel="stylesheet" href="./assets/styles/formulario/fonts.css">
-    <script src="assets/js/formulario/formulario.js"></script>
     <title>Formulario</title>
 </head>
 <body>
     <div class="container_form">
         <form id="form" action="#">
             <h2>Registration</h2>
-            <input type="text" placeholder="Enter your name">
-            <input type="text" placeholder="Enter your email">
-            <input type="text" placeholder="Create password">
-            <input type="text" placeholder="Confirm password">
+            <input id="inputName" class="form_input" type="text" placeholder="Enter your name">
+            <input id="inputMail" class="form_input" type="text" placeholder="Enter your email">
+            <input id="inputPassword" class="form_input" type="password" placeholder="Create password">
+            <input id="inputPassConfirm" class="form_input" type="password" placeholder="Confirm password">
             <div class="check_container">
                 <input type="checkbox"> <label for="checkbox">I accept all terms and conditions</label>
             </div>
-            <button type="submit">Register now</button>
+            <button id="registerButton">Register now</button>
             <div class="account_existing ">
                 <label for="">Already have an account?</label><a href=""> Login now</a>
             </div>
@@ -30,5 +29,6 @@
         <h1>Sign up</h1>
         <h1>Form</h1>
     </div>
+    <script src="assets/js/formulario/formulario.js"></script>
 </body>
 </html>

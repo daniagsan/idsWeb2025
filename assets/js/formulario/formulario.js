@@ -1,26 +1,72 @@
-$(document).ready(function() {
+const inputs = document.querySelectorAll('#form .form_input');
+const emailInput = document.getElementById('inputMail');
+const submitButton = document.getElementById('registerButton');
 
-    $(document).on("keypress", function (e) {
-        console.log("Evento keypress global detectado:", e);
-    });
+var flag = false;
 
-    $('input[placeholder="Enter your name"]').on("keypress", function(e) {
+inputs.forEach(input => {
+    input.addEventListener('keydown', function(event){
+    
+    const inputId = input.id;
+    const inputValue = input.value.trim();
+    const key = event.key;
+    const regExNumbers = /[0-9]/g;
+    const arroba = /@/;
 
-        console.log("Tecla presionada en el campo 'Enter your name':", String.fromCharCode(e.which));
-    });
+    const allowedKeys = ['Backspace', 'Delete', 'ArrowLeft','ArrowRigth'];
 
-    $('input[placeholder="Create password"]').on("keypress", function(e) {
-        const char = String.fromCharCode(e.which);
-        if (char === ' ') { 
-            e.preventDefault();
-            console.log("No se permiten espacios en el campo de contraseña.");
-        }
-    });
+    if(allowedKeys.includes(key)){
+        return;
+    }
 
-    $('input[placeholder="Enter your email"]').on("keypress", function(e) {
-        if (e.which != 8 && e.which != 0 && (e.which < 48 || e.which > 57)) {
-            e.preventDefault(); 
-            console.log("Solo se permiten números en el campo de email (para este ejemplo).");
-        }
+    console.log(`Validando tecla "${key}" el input: ${inputId}`);
+
+    switch(inputId){
+        case "inputName":
+            if(regExNumbers.test(key)){
+                event.preventDefault();   
+                //input.value = inputValue.replace(regExNumbers, '');
+            }
+            break;
+        case "inputPassword":
+            if(key === ' '){
+                console.log("Se presiono espacio");
+                event.preventDefault();
+            }
+
+            break;
+        case "inputPassConfirm":
+            if(key === ' '){
+                console.log("Se presiono espacio");
+                event.preventDefault();
+            }
+            break;
+    } 
+
     });
 });
+
+emailInput.addEventListener('blur', function(event){
+    let finder = ""
+        finder = emailInput.value.trim();
+
+    
+
+    for(let i = 0; i < finder.length; i++){
+        if(/@/.test(finder[i]) || /\./.test(finder[i])){
+            console.log("Se encontró un arroba o un punto");
+            flag = true;
+        }
+    }
+
+    if(!flag){
+        emailInput.style.borderColor = 'red';
+    }
+
+});
+
+submitButton.addEventListener('click', () => {
+    if(!flag){
+        console.log("Revisar campos");
+    }
+})
