@@ -2,7 +2,7 @@
     "workbench.preferredHighContrastColorTheme": "Visual Studio Dark",
     "workbench.preferredHighContrastLightColorTheme": "Visual Studio Dark",
     "workbench.preferredLightColorTheme": "Default High Contrast",
-    "livePreview.defaultPreviewPath": "/calculadora.html",
+    "livePreview.defaultPreviewPath": "/todolist.html",
     "geminicodeassist.chat.changeView": "Inline suggestions",
     "geminicodeassist.chat.defaultCodeBlockDisplay": "Preview",
     "geminicodeassist.codeGenerationPaneViewEnabled": true

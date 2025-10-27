@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'UnivanovaRegular';
+    src: url("../../fonts/Univanova/UnivaNova-Regular.otf") format('opentype');
+}
+
+* {
+    font-family: 'UnivanovaRegular';
+}

@@ -1,0 +1,156 @@
+:root {
+    --azulPrincipal: #2596be;
+}
+
+body {
+    width: 100vh;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 5vh;
+    background-image: linear-gradient(to top,#ffd55d 50%, var(--azulPrincipal) 50%);
+    background-repeat: no-repeat;
+}
+
+.mainContainer {
+    height: 80vh;
+    width: 60vh;
+    max-width: 100%;
+    background-color: #f0f8fb;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y:auto;
+    -ms-overflow-style: none;
+}
+
+.mainContainer::-webkit-scrollbar {
+    display: none;
+}
+
+#addButton {
+    font-size: 90%;
+    background-color: var(--azulPrincipal);
+    border-radius: 10%;
+    width: 65px;
+    height: 30px;
+    color: white;
+    border-style: none;
+    margin-left: 10px;
+}
+
+#inputTask {
+    font-size: 20px;
+    background-color: white;
+    border-color: white;
+    background: none;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    width: 100%;
+}
+
+.addTaskArea {
+    display: flex;
+    margin: 20px 0;
+    width: 100%;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.labelArea {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 10px;
+    padding-left: 0;
+    width: 100%;
+}
+
+#taskCounter {
+    color: var(--azulPrincipal);
+}
+
+#taskList {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    /* overflow-y: auto; */
+    max-height: 100%;
+}
+
+.itemContainer {
+    margin: 5px 0;
+    padding: 5px;
+    border: 1px solid #dddddd34;
+    border-radius: 4px;
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* width: calc(100% - 20px); */
+    box-sizing: border-box;
+}
+
+.taskName {
+    margin-right: 18px;
+    background: none;
+    border: none;
+}
+
+.deleteTask {
+    background-color: red;
+    cursor: pointer;
+    border: 1px solid #e0e0e0;
+}
+
+.deleteTask svg {
+    fill: white;
+}
+
+.editTask {
+    background-color: var(--azulPrincipal);
+    cursor: pointer;
+    border: 1px solid #e0e0e0;
+}
+
+.editTask svg {
+    fill: white;
+}
+
+.itemContainer > button {
+    border-radius: 5px;
+}
+
+.finishedTask {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    vertical-align: middle;
+    border: 1px solid rgba(0, 0, 0, 0.496);
+    appearance: none;
+    -webkit-appearance: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.finishedTask:checked {
+    appearance: auto;
+  clip-path: circle(50% at 50% 50%);
+  background-color: blue;
+}
+
+.taskNameLineThrough {
+    margin-right: 18px;
+    background: none;
+    border: none;
+    text-decoration: line-through;
+    font-style: italic;
+}
+
+
