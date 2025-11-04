@@ -1,0 +1,23 @@
+body {
+    background-color: white;
+    background-image: url(../resources/pokedex.jpg);
+    background-size: 60vh;
+    background-repeat: no-repeat;
+    background-position-y: 20px;
+    background-position-x: 50%;
+}
+
+.mainContainer {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.trainerName {
+    background-color: blue;
+    margin-top: 71vh;
+    margin-left: 89vh;
+    width: 30vh;
+}
