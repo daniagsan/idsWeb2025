@@ -294,12 +294,19 @@ function loadSesion(){
 
     let trainerData = JSON.parse(localStorage.getItem('trainerData'));
     
+    // Verificar si trainerData existe
+    if(!trainerData){
+      instructionsLabel.textContent = "¡Inserta tu nombre entrenador(a)!";
+      return;
+    }
+    
+    // Verificar si el equipo está vacío
     if(trainerData.pokeTeam.length === 0){
       instructionsLabel.textContent = `Bienvenido(a) de nuevo ${trainerData.name}`;
       setTimeout(() => {
         instructionsLabel.textContent = "¡No tienes pokémon! Intenta buscar uno"
       }, 2000);
-      return;
+      return; // Salir de la función, no cargar el equipo
     }
     
     instructionsLabel.textContent = `Bienvenido(a) de nuevo ${trainerData.name}`;
