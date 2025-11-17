@@ -1,16 +1,15 @@
 <?php 
   
     include 'connectionController.php';
-    $action = $_POST['action'];
-
-    if($action == 'login'){
+    
+    if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
         $username = $_POST['username'];
 		$password = $_POST['password'];
         $email = $_POST['email'];
 
 		$auth = new AuthController();
-		$auth->login($username,$password,$email);
+		$auth->register($username, $email, $password);
 
     }
 
@@ -22,31 +21,30 @@
             $this->connection = new ConnectionController();
         }
 
-        function login($username,$password,$email){
+        public function register($username, $email, $password){
+
+            
 
             $conn = $this->connection->connect();
-            if (!$conn->connect_error) {
+            if ($conn && !$conn->connect_error) {
+
+                $hashed_password = password_hash($password, PASSWORD_BCRYPT);
                 
-                $query = "select * from usuarios where username = ?, email = ? and password = ?";
+                $query = "INSERT INTO usuarios (nombre, email, password) VALUES (?, ?, ?)";
 
                 $prepared_query = $conn->prepare($query);
 
-                $prepared_query->bind_param('ss', $username, $password);
+                $prepared_query->bind_param('sss', $username, $email, $hashed_password);
 
-                $prepared_query->execute();
-
-                $results = $prepared_query->get_result();
-                $users = $results->fetch_all(MYSQLI_ASSOC);
-
-                if (count($users)>0) {
-                    
+                if($prepared_query->execute()){
                     header('Location: ../home.html');
+                } else {
+                    echo "Error: " . $prepared_query->error;
+                }
 
-                }else
-                    header('Location: ../registro/registro.html');
-                
-            }else
-                header('Location: ../registro/registro.html');
+            } else {
+                echo "Database connection error";
+            }
         } 
 
     }

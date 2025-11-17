@@ -1,20 +1,22 @@
 <?php
 
+class ConnectionController {
     private $HOST = 'localhost';
     private $USER = 'root';
     private $PASS = '';
-    private $DBNM = 
+    private $DBNM = 'mi_proyecto';
 
-    function connect(){
+    public function connect(){
         
-        $conn = new mysqli ($this->HOST,$this->USER,$this->PASS,$this->DBNM);
+        $conn = new mysqli($this->HOST, $this->USER, $this->PASS, $this->DBNM);
 
-        if($conn){
+        if(!$conn->connect_error){
             return $conn;
         }
 
-        retur null;
+        return null;
 
     }
+}
 
 ?>
