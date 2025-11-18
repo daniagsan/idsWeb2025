@@ -1,0 +1,40 @@
+.navBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center ;
+}
+
+.infoPage {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10vh;
+}
+
+.searchBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.searchBar > input{
+    position: relative;
+    width: 200px;
+    height: 25px;
+}
+
+.searchBar > input{
+    position: relative;
+    width: 200px;
+    height: 25px;
+}
+
+.searchBar > img{
+    position: absolute;
+    right: 1%;
+}
+
+
+
+
+
