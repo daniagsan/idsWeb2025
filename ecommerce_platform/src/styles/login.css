@@ -1,3 +1,26 @@
+@font-face {
+    font-family: 'titulos';
+    src: url("../fonts/Recta/fonnts.com-Recta-Bold.otf");
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/Roboto/Roboto-Light.ttf');
+}
+
+body {
+    margin: 0;
+    top: 0;
+}
+
+h1 {
+    font-family: 'titulos';
+}
+
+p, h3, input,a,button {
+    font-family: 'Roboto';
+}
+
 .navBar {
     display: flex;
     justify-content: space-between;
@@ -15,6 +38,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 10px;
 }
 
 .searchBar > input{
@@ -32,6 +56,54 @@
 .searchBar > img{
     position: absolute;
     right: 1%;
+}
+
+.userArea {
+    display: flex;
+    align-content: center;
+}
+
+.userArea img{
+    width: 50%;
+    height: 50%;
+}
+
+.loginCard {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 15%;
+}
+
+.loginCard > h1{
+    margin-bottom: 0;
+}
+
+.loginCard > p{
+    margin-bottom: 13%;
+}
+
+.loginCard > input {
+    width: 100%;
+    height: 30px;
+    margin-bottom: 15px;
+}
+
+.loginButtons {
+    margin-top: 5%;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+.loginButtons > button{
+  background-color: #DB4444;
+  color: white;
+  font-size: 16px;
+  border-style: none;
+  border-radius: 5px;
+  width: 100px;
+  height: 40px; 
 }
 
 
