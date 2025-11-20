@@ -81,6 +81,7 @@ p, h3,h4,h5, input,a,button {
 .loginCard {
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-direction: column;
     margin-left: 15%;
 }
@@ -99,21 +100,23 @@ p, h3,h4,h5, input,a,button {
     margin-bottom: 15px;
 }
 
-.loginButtons {
-    margin-top: 5%;
-    display: flex;
-    justify-content:space-between;
-    align-items: center;
+.loginCard > button {
+    width: 103%;
+    height: 30px;
+    margin-bottom: 15px;
+    background-color: #DB4444;
+    border-style: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    height: 40px;
 }
 
-.loginButtons > button{
-  background-color: #DB4444;
-  color: white;
-  font-size: 16px;
-  border-style: none;
-  border-radius: 5px;
-  width: 100px;
-  height: 40px; 
+.loginButtons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
 }
 
 footer {
